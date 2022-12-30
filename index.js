@@ -1,5 +1,23 @@
 'use strict'
 
+let wordList = [
+    'patio',
+    'darts',
+    'piano',
+    'horse',
+    'hello',
+    'water',
+    'pizza',
+    'sushi',
+    'crabs'
+];
+
+let randomIndex = Math.floor(Math.random() * wordList.length)
+let correctWord = wordList[randomIndex]
+
+let currentGuess = ''
+let allGuesses = []
+
 let grid = document.getElementById('grid')
 
 function createGrid() {
@@ -8,11 +26,16 @@ function createGrid() {
         for (let j = 0; j < 5; j++) {
             let slot = document.createElement('div')
             slot.className = 'slot'
-            slot.textContent = 'A'
             row.appendChild(slot)
         }
         grid.appendChild(row)
     }
 }
 
+function updateGrid() {
+    let row = grid.firstChild
+
+}
+
 createGrid()
+updateGrid()
